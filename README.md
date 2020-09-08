@@ -8,15 +8,11 @@ From https://github.com/yanzhenjie/android-zbar-sdk
 
 To build libzbar.a with bitcode enabled for standard 64bit architectures, follow these instructions:
 
-1. Install mercurial:
+1. Clone the zbar repository:
 ```
-brew install hg
-```
-2. Clone the zbar repository:
-```
-hg clone http://zbar.hg.sourceforge.net:8000/hgroot/zbar/zbar 
+git clone git@github.com:mchehab/zbar.git
 cd zbar 
-hg checkout iPhoneSDK-1.3.1 
+hg checkout 0.23.1
 ```
 3. Open `iphone/zbar.xcodeproj` in Xcode.  For target libzbar.a, make sure `Architectures` is set to `Standard architectures - $(ARCHS_STANDARD)` and `Enable Bitcode` is set to `Yes`.
 
